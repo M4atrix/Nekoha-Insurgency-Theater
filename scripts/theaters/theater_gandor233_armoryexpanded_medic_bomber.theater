@@ -1,0 +1,2946 @@
+"#base" "base/theater_gandor233_armoryexpanded_base_player.theater"
+"#base" "base/theater_gandor233_armoryexpanded_base_common_ammo.theater"
+"#base" "base/theater_gandor233_armoryexpanded_base_explosives.theater"
+"#base" "base/theater_gandor233_armoryexpanded_base_weapon.theater"
+"#base" "base/theater_gandor233_armoryexpanded_base_weapon_upgrades.theater"
+
+"#base" "base/theater_gandor233_armoryexpanded_gear.theater"
+"#base" "base/theater_gandor233_armoryexpanded_weapon.theater"
+"#base" "base/theater_gandor233_armoryexpanded_weapon_custom.theater"
+"#base" "base/theater_gandor233_armoryexpanded_weapon_upgrades.theater"
+"#base" "base/theater_gandor233_armoryexpanded_weapon_upgrades_custom.theater"
+
+"#base" "base/theater_gandor233_air_support.theater"
+
+"#base" "theater_gandor233_all.theater"
+
+"theater"
+{
+	"core"
+	{
+		"precache"
+		{
+			"particles"			"particles/doi_explosion_fx_new.pcf"
+			"particles"			"particles/gandor_custom_particles.pcf"
+			
+			"sounds"			"scripts/gandor233_fixbug_sounds.txt"
+			"sounds"			"scripts/gandor233_game_sounds.txt"
+			
+			"sounds"			"scripts/ins_sounds_world.txt"
+			"sounds"			"scripts/ins_sounds_weapons_generic.txt"
+			"sounds"			"scripts/ins_sounds_weapons.txt"
+			"sounds"			"scripts/ins_sounds_cues.txt"
+			"sounds"			"scripts/ins_sounds_voice.txt"
+			"sounds"			"scripts/ins_sounds_radial_security.txt"
+			"sounds"			"scripts/ins_sounds_radial_insurgent.txt"
+			"sounds"			"scripts/ins_sounds_responses_security.txt"
+			"sounds"			"scripts/ins_sounds_responses_insurgent.txt"
+			"sounds"			"scripts/ins_sounds_voice_survival.txt"
+			"sounds"			"scripts/ins_sounds_hq.txt"
+			"sounds"			"scripts/ins_sounds_voice_coop.txt"
+			
+			"sounds"			"scripts/doi_sounds_weapons.txt"
+			"sounds"			"scripts/game_sounds_player.txt"
+			"sounds"			"scripts/angrybots_modern_sounds.txt"
+			"sounds"			"scripts/gandor233_customweapon_sounds.txt"
+			"sounds"			"scripts/air_support_sound.txt"
+			"sounds"            "scripts/prorussian_sounds_weapons.txt"
+			"sounds"            "scripts/game_sounds_manifest.txt"
+			
+			"localize"			"resource/ui/gandor233_armoryexpanded_english.txt"
+			"localize"			"resource/gandor233_all_%language%.txt"
+		}
+		
+		// use this to register any acts not registered by the game DLL
+		// "activities"
+		// {
+		// "act"                "ACT_VM_SOMETHING"
+		// }
+	}
+	
+	"teams"
+	{
+		"security"
+		{
+			"name"					"#Team_Security"
+			"logo"					"gameui/fac_sec2"
+		}
+		
+		"insurgents"
+		{
+			"name"					"#Team_Insurgent"
+			"logo"					"gameui/fac_ins2"
+		}
+	}
+	
+	"player_templates"
+	{
+		//  										 LEADER 											  //
+		"squad_commander_leader"
+		{
+			"import"				"squad_commander"
+			"print_name"			"#Squad_Commander_Leader"
+		}
+		"squad_assault_leader"
+		{
+			"import"				"squad_assault"
+			"print_name"			"#Squad_Assault_Leader"
+		}
+		"squad_engineer_leader"
+		{
+			"import"				"squad_engineer"
+			"print_name"			"#Squad_Engineer_Leader"
+		}
+		"squad_medic_leader"
+		{
+			"import"				"squad_medic"
+			"print_name"			"#Squad_Medic_Leader"
+		}
+
+		//  										  SQUAD 											  //
+		"squad_commander"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Prayuth"
+			"models"
+			{
+				"player"				"models/characters/alpfa/codmw2_us_k.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_zina.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"1"
+					"backpack"				"1"
+					"hlem"                  "2"
+					"glasses"               "0"
+					"boroda"				"1"
+					"bronka"				"1"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_doi2ins_hatchet"
+				
+				"weapon"				"weapon_m4a1"
+				
+				"weapon"				"weapon_glock18"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+
+				"gear"					"sec_character_bs_l"
+				"gear"					"sec_character_2"
+				"gear"					"sec_character_4"
+				"gear"					"sec_character_6"
+				"gear"					"sec_character_7"
+				
+				
+				
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				"weapon"				"weapon_doi2ins_hatchet"
+				//"weapon"				"weapon_binoculars_british"
+				//"weapon"				"weapon_binoculars_american"
+				//"weapon"				"weapon_binoculars_german"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				// "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				"weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				"weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				// "weapon"				"weapon_anm14"
+				// "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				   "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+				"weapon"				"weapon_gyurza"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_m4a1"
+				"weapon"				"weapon_m16a4"
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				"weapon"				"weapon_mk18"
+				"weapon"				"weapon_galil_sar"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_l1a1"
+				"weapon"				"weapon_scarl"
+				"weapon"				"weapon_l85a2"
+				"weapon"				"weapon_f2000"
+				"weapon"				"weapon_steyraug"
+				"weapon"				"weapon_c96carbine"
+				"weapon"				"weapon_asval"
+				"weapon"				"weapon_m4a1sopmod"
+				"weapon"				"weapon_m16a1"
+				"weapon"				"weapon_sr25"
+				"weapon"				"weapon_mk18_m0"
+				"weapon"				"weapon_type95"
+				"weapon"				"weapon_cm901"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_hk417"
+				"weapon"				"weapon_honeybadger"
+				"weapon"				"weapon_car15"
+				"weapon"				"weapon_g33"
+				"weapon"				"weapon_ak12u"
+				"weapon"				"weapon_acr"
+				"weapon"				"weapon_sig553"
+				"weapon"				"weapon_scar"
+				"weapon"				"weapon_g36c"
+				"weapon"				"weapon_famas"
+				"weapon"				"weapon_an94"
+				"weapon"				"weapon_aek971"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp5"
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				"weapon"				"weapon_ump45"
+				"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_sten"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_krissvector"
+				"weapon"				"weapon_ppsh41"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_ots33"
+				"weapon"				"weapon_mp7"
+				"weapon"				"weapon_mp5a4"
+				"weapon"				"weapon_uzi"
+				"weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				"weapon"				"weapon_mini14"
+				"weapon"				"weapon_m14"
+				"weapon"				"weapon_m1a1"
+				"weapon"				"weapon_sks"
+				"weapon"				"weapon_dragunovsvu"
+				"weapon"				"weapon_m1asocom16"
+				"weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				"weapon"				"weapon_m40a1"
+				"weapon"				"weapon_mosin"
+				"weapon"				"weapon_kar98"
+				//"weapon"				"weapon_M107"
+				"weapon"				"weapon_enfield"
+				//"weapon"				"weapon_remingtonmsr"
+				//"weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				//"weapon"				"weapon_m249"
+				//"weapon"				"weapon_rpk"
+				//"weapon"				"weapon_mg42"
+				//"weapon"				"weapon_mk46"
+				//"weapon"				"weapon_m60"
+				//"weapon"				"weapon_pecheneg"
+				//"weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_assault"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Assault"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				
+				"weapon"				"weapon_m4a1"
+				
+				"weapon"				"weapon_glock18"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				//"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				//"weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				// "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				   "weapon"				"weapon_f1"
+				   "weapon"				"weapon_anm14"
+				   "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				// "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_m4a1"
+				"weapon"				"weapon_m16a4"
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				"weapon"				"weapon_mk18"
+				//"weapon"				"weapon_galil_sar"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_l1a1"
+				"weapon"				"weapon_scarl"
+				"weapon"				"weapon_l85a2"
+				"weapon"				"weapon_f2000"
+				"weapon"				"weapon_steyraug"
+				"weapon"				"weapon_c96carbine"
+				//"weapon"				"weapon_asval"
+				//"weapon"				"weapon_m4a1sopmod"
+				"weapon"				"weapon_m16a1"
+				"weapon"				"weapon_sr25"
+				//"weapon"				"weapon_mk18_m0"
+				"weapon"				"weapon_type95"
+				"weapon"				"weapon_cm901"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_hk417"
+				//"weapon"				"weapon_honeybadger"
+				"weapon"				"weapon_car15"
+				"weapon"				"weapon_g33"
+				"weapon"				"weapon_ak12u"
+				//"weapon"				"weapon_acr"
+				"weapon"				"weapon_sig553"
+				//"weapon"				"weapon_scar"
+				//"weapon"				"weapon_g36c"
+				"weapon"				"weapon_famas"
+				//"weapon" 				"weapon_an94"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				//"weapon"				"weapon_mp5"
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				//"weapon"				"weapon_ump45"
+				//"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_sten"
+				//"weapon"				"weapon_p90"
+				//"weapon"				"weapon_krissvector"
+				"weapon"				"weapon_ppsh41"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_ots33"
+				//"weapon"				"weapon_mp7"
+				//"weapon"				"weapon_mp5a4"
+				//"weapon"				"weapon_uzi"
+				"weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				"weapon"				"weapon_mini14"
+				"weapon"				"weapon_m14"
+				"weapon"				"weapon_m1a1"
+				"weapon"				"weapon_sks"
+				"weapon"				"weapon_dragunovsvu"
+				"weapon"				"weapon_m1asocom16"
+				"weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_recon"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Recon"
+			"models"
+			{
+				"player"				"models/characters/alpfa/codmw2_us_g.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"1"
+					"backpack"				"1"
+					"hlem"                  "1"
+					"glasses"               "1"
+					"boroda"				"3"
+					"bronka"				"1"
+				}
+			}
+			"buy_order"
+			{
+
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_kabar"
+				
+				"weapon"				"weapon_m14"
+				
+				"weapon"				"weapon_glock18"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				// "gear"					"sec_heavy_armor2"
+				"gear"					"sec_character_bs_l"
+				"gear"					"sec_character_0"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				// "weapon"				"weapon_doi2ins_brassknuckles_melee"
+				// "weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				// "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				   "weapon"				"weapon_f1"
+				   "weapon"				"weapon_anm14"
+				   "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				// "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_m4a1"
+				 "weapon"				"weapon_m16a4"
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				 "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				// "weapon"				"weapon_l85a2"
+				// "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				// "weapon"				"weapon_c96carbine"
+				// "weapon"				"weapon_asval"
+				// "weapon"				"weapon_m4a1sopmod"
+				// "weapon"				"weapon_m16a1"
+				// "weapon"				"weapon_sr25"
+				// "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				// "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				// "weapon"				"weapon_sig553"
+				 "weapon"				"weapon_scar"
+				// "weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+				// "weapon" 			"weapon_an94"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				//"weapon"				"weapon_mp5"
+				//"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				//"weapon"				"weapon_ump45"
+				//"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_sten"
+				//"weapon"				"weapon_p90"
+				//"weapon"				"weapon_krissvector"
+				"weapon"				"weapon_ppsh41"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_ots33"
+				//"weapon"				"weapon_mp7"
+				//"weapon"				"weapon_mp5a4"
+				//"weapon"				"weapon_uzi"
+				"weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				"weapon"				"weapon_mini14"
+				"weapon"				"weapon_m14"
+				"weapon"				"weapon_m1a1"
+				"weapon"				"weapon_sks"
+				"weapon"				"weapon_dragunovsvu"
+				"weapon"				"weapon_m1asocom16"
+				"weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				"weapon"				"weapon_m40a1"
+				"weapon"				"weapon_mosin"
+				"weapon"				"weapon_kar98"
+				"weapon"				"weapon_M107"
+				"weapon"				"weapon_enfield"
+				"weapon"				"weapon_remingtonmsr"
+				"weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_demolitionist"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Demolitionist"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_kabar"
+
+				"weapon"				"weapon_at4"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				//"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				//"weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				"weapon"				"weapon_rpg7"
+				"weapon"				"weapon_at4"
+				"weapon"				"weapon_m79"
+				"weapon"				"weapon_m79_smoke"
+				"weapon"				"weapon_m79_napalm"
+				"weapon"				"weapon_c4_clicker"
+				"weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_geballteladung"
+				"weapon"				"weapon_hafthohlladung"
+				"weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_anm14"
+				"weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				// "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_m4a1"
+				// "weapon"				"weapon_m16a4"
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				"weapon"				"weapon_l85a2"
+				// "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				"weapon"				"weapon_c96carbine"
+				//"weapon"				"weapon_asval"
+				//"weapon"				"weapon_m4a1sopmod"
+				"weapon"				"weapon_m16a1"
+				"weapon"				"weapon_sr25"
+				// "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				// "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				 "weapon"				"weapon_sig553"
+				// "weapon"				"weapon_scar"
+				//"weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp5"
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_ump45"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_sten"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_krissvector"
+				// "weapon"				"weapon_ppsh41"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_ots33"
+				// "weapon"				"weapon_mp7"
+				// "weapon"				"weapon_mp5a4"
+				// "weapon"				"weapon_uzi"
+				// "weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_mini14"
+				// "weapon"				"weapon_m14"
+				// "weapon"				"weapon_m1a1"
+				// "weapon"				"weapon_sks"
+				// "weapon"				"weapon_dragunovsvu"
+				// "weapon"				"weapon_m1asocom16"
+				// "weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_m590"
+				// "weapon"				"weapon_toz"
+				// "weapon"				"weapon_saiga12auto"
+				// "weapon"				"weapon_m1014"
+				// "weapon"				"weapon_m500"
+				// "weapon"				"weapon_nova"
+				// "weapon"				"weapon_ksg"
+				// "weapon"				"weapon_spas12"
+			}
+		}
+		"squad_engineer"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Engineer"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+
+				"weapon"				"weapon_doi2ins_etool_brit_melee"
+
+				"weapon"				"weapon_galil_sar"
+
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				// "gear"					"sec_heavy_armor2"
+
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				// "weapon"				"weapon_doi2ins_brassknuckles_melee"
+				// "weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				// "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				// "weapon"				"weapon_anm14"
+				// "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				"weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_sigp226"
+				// "weapon"				"weapon_mp443"
+				// "weapon"				"weapon_m45seriespistol"
+				// "weapon"				"weapon_cobra"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_m4a1"
+				// "weapon"				"weapon_m16a4"
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				"weapon"				"weapon_galil_sar"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				// "weapon"				"weapon_l85a2"
+				// "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				// "weapon"				"weapon_c96carbine"
+				// "weapon"				"weapon_asval"
+				// "weapon"				"weapon_m4a1sopmod"
+				// "weapon"				"weapon_m16a1"
+				// "weapon"				"weapon_sr25"
+				// "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				// "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				// "weapon"				"weapon_sig553"
+				// "weapon"				"weapon_scar"
+				// "weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp5"
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_ump45"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_sten"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_krissvector"
+				// "weapon"				"weapon_ppsh41"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_ots33"
+				// "weapon"				"weapon_mp7"
+				// "weapon"				"weapon_mp5a4"
+				// "weapon"				"weapon_uzi"
+				// "weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_mini14"
+				// "weapon"				"weapon_m14"
+				// "weapon"				"weapon_m1a1"
+				// "weapon"				"weapon_sks"
+				// "weapon"				"weapon_dragunovsvu"
+				// "weapon"				"weapon_m1asocom16"
+				// "weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				"weapon"				"weapon_m249"
+				"weapon"				"weapon_rpk"
+				"weapon"				"weapon_mg42"
+				"weapon"				"weapon_mk46"
+				"weapon"				"weapon_m60"
+				"weapon"				"weapon_pecheneg"
+				"weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_swat"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Swat"
+			"models"
+			{
+				"player"				"models/characters/security_standard_cf.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_kabar"
+				
+				"weapon"				"weapon_g36c"
+				
+				"weapon"				"weapon_glock18"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				// "gear"					"sec_heavy_armor2"
+				"gear"					"sec_character_bs_l"
+				"gear"					"sec_character_5"
+				"gear"					"sec_character_3"
+				"gear"					"sec_heavy_armor3"
+				"gear"					"sec_character_8"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				   "weapon"				"weapon_doi2ins_brassknuckles_melee"
+				// "weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				// "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				   "weapon"				"weapon_f1"
+				   "weapon"				"weapon_anm14"
+				   "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				 "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_m4a1"
+				// "weapon"				"weapon_m16a4"
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				// "weapon"				"weapon_l85a2"
+				// "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				   "weapon"				"weapon_c96carbine"
+				   "weapon"				"weapon_asval"
+				// "weapon"				"weapon_m4a1sopmod"
+				// "weapon"				"weapon_m16a1"
+				// "weapon"				"weapon_sr25"
+				 "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				   "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				// "weapon"				"weapon_sig553"
+				//"weapon"				"weapon_scar"
+				 "weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+				// "weapon" 			"weapon_an94"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp5"
+				//"weapon"				"weapon_mp40"
+				//"weapon"				"weapon_sterling"
+				"weapon"				"weapon_ump45"
+				"weapon"				"weapon_aks74u"
+				//"weapon"				"weapon_sten"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_krissvector"
+				"weapon"				"weapon_ppsh41"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_ots33"
+				"weapon"				"weapon_mp7"
+				"weapon"				"weapon_mp5a4"
+				"weapon"				"weapon_uzi"
+				"weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				//"weapon"				"weapon_mini14"
+				//"weapon"				"weapon_m14"
+				//"weapon"				"weapon_m1a1"
+				//"weapon"				"weapon_sks"
+				//"weapon"				"weapon_dragunovsvu"
+				//"weapon"				"weapon_m1asocom16"
+				//"weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				//"weapon"				"weapon_m40a1"
+				//"weapon"				"weapon_mosin"
+				//"weapon"				"weapon_kar98"
+				//"weapon"				"weapon_M107"
+				//"weapon"				"weapon_enfield"
+				//"weapon"				"weapon_remingtonmsr"
+				//"weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_demolitionist"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Demolitionist"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+				
+				"weapon"				"weapon_kabar"
+
+				"weapon"				"weapon_at4"
+				
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_healthkit"
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				//"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				//"weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				"weapon"				"weapon_rpg7"
+				"weapon"				"weapon_at4"
+				"weapon"				"weapon_m79"
+				"weapon"				"weapon_m79_smoke"
+				"weapon"				"weapon_m79_napalm"
+				"weapon"				"weapon_c4_clicker"
+				"weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_geballteladung"
+				"weapon"				"weapon_hafthohlladung"
+				"weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_anm14"
+				"weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				// "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_m4a1"
+				// "weapon"				"weapon_m16a4"
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				"weapon"				"weapon_l85a2"
+				// "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				"weapon"				"weapon_c96carbine"
+				//"weapon"				"weapon_asval"
+				//"weapon"				"weapon_m4a1sopmod"
+				"weapon"				"weapon_m16a1"
+				"weapon"				"weapon_sr25"
+				// "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				 "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				 "weapon"				"weapon_sig553"
+				// "weapon"				"weapon_scar"
+				 "weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp5"
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_ump45"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_sten"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_krissvector"
+				// "weapon"				"weapon_ppsh41"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_ots33"
+				// "weapon"				"weapon_mp7"
+				// "weapon"				"weapon_mp5a4"
+				// "weapon"				"weapon_uzi"
+				// "weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_mini14"
+				// "weapon"				"weapon_m14"
+				// "weapon"				"weapon_m1a1"
+				// "weapon"				"weapon_sks"
+				// "weapon"				"weapon_dragunovsvu"
+				// "weapon"				"weapon_m1asocom16"
+				// "weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_m590"
+				// "weapon"				"weapon_toz"
+				// "weapon"				"weapon_saiga12auto"
+				// "weapon"				"weapon_m1014"
+				// "weapon"				"weapon_m500"
+				// "weapon"				"weapon_nova"
+				// "weapon"				"weapon_ksg"
+				// "weapon"				"weapon_spas12"
+			}
+		}
+		"squad_lieutenant"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Lieutenant"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+
+				"weapon"				"weapon_doi2ins_etool_brit_melee"
+
+				"weapon"				"weapon_m4a1"
+
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				 "weapon_upgrade"					"underbarrel_ugl_smoke"
+				 "weapon_upgrade"					"underbarrel_m203_smoke"
+				 "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				 "weapon"				"weapon_doi2ins_brassknuckles_melee"
+				// "weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				 "weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				 "weapon"				"weapon_anm14"
+				 "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+				"weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				 "weapon"				"weapon_m9"
+				 "weapon"				"weapon_makarov"
+				 "weapon"				"weapon_sigp226"
+				 "weapon"				"weapon_mp443"
+				 "weapon"				"weapon_m45seriespistol"
+				 "weapon"				"weapon_cobra"
+				 "weapon"				"weapon_deagle"
+				 "weapon"				"weapon_glock18"
+				 "weapon"				"weapon_hkusp"
+				 "weapon"				"weapon_gyurza"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				 "weapon"				"weapon_m4a1"
+				 "weapon"				"weapon_m16a4"
+				 "weapon"				"weapon_akm"
+				 "weapon"				"weapon_ak74"
+				 "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				 "weapon"				"weapon_fal"
+				 "weapon"				"weapon_l1a1"
+				 "weapon"				"weapon_scarl"
+				 "weapon"				"weapon_l85a2"
+				 "weapon"				"weapon_f2000"
+				 "weapon"				"weapon_steyraug"
+				// "weapon"				"weapon_c96carbine"
+				 "weapon"				"weapon_asval"
+				 "weapon"				"weapon_m4a1sopmod"
+				 "weapon"				"weapon_m16a1"
+				 "weapon"				"weapon_sr25"
+				 "weapon"				"weapon_mk18_m0"
+				 "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				 "weapon"				"weapon_stg44"
+				 "weapon"				"weapon_hk417"
+				// "weapon"				"weapon_honeybadger"
+				 "weapon"				"weapon_car15"
+				 "weapon"				"weapon_g33"
+				 "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				// "weapon"				"weapon_sig553"
+				   "weapon"				"weapon_scar"
+				 "weapon"				"weapon_g36c"
+				 "weapon"				"weapon_famas"
+				 "weapon"				"weapon_aek971"
+				 "weapon"				"weapon_an94"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				 "weapon"				"weapon_mp5"
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_ump45"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_sten"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_krissvector"
+				// "weapon"				"weapon_ppsh41"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_ots33"
+				// "weapon"				"weapon_mp7"
+				 "weapon"				"weapon_mp5a4"
+				// "weapon"				"weapon_uzi"
+				 "weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_mini14"
+				// "weapon"				"weapon_m14"
+				// "weapon"				"weapon_m1a1"
+				// "weapon"				"weapon_sks"
+				// "weapon"				"weapon_dragunovsvu"
+				// "weapon"				"weapon_m1asocom16"
+				// "weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				//"weapon"				"weapon_m249"
+				//"weapon"				"weapon_rpk"
+				//"weapon"				"weapon_mg42"
+				//"weapon"				"weapon_mk46"
+				//"weapon"				"weapon_m60"
+				//"weapon"				"weapon_pecheneg"
+				//"weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+		}
+		"squad_medic"
+		{
+			"team"					"security"
+			"print_name"				"#Squad_Medic"
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_m.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_carrier"
+
+				"weapon"				"weapon_defib"
+				"weapon"				"weapon_kabar"
+				
+				"weapon"				"weapon_healthkit"
+
+				"weapon"				"weapon_glock18"
+
+			}
+			"allowed_items"
+			{
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"gear"					"sec_heavy_armor2"
+
+				"gear"					"sec_character_bs_l"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				// "weapon"				"weapon_doi2ins_brassknuckles_melee"
+				// "weapon"				"weapon_doi2ins_hatchet"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_at4"
+				// "weapon"				"weapon_m79"
+				"weapon"				"weapon_m79_smoke"
+				// "weapon"				"weapon_m79_napalm"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_geballteladung"
+				// "weapon"				"weapon_hafthohlladung"
+				// "weapon"				"weapon_m26a2"
+				// "weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_anm14"
+				"weapon"				"weapon_molotov"
+				"weapon"				"weapon_m18"
+				// "weapon"				"weapon_m84"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_sigp226"
+				"weapon"				"weapon_mp443"
+				"weapon"				"weapon_m45seriespistol"
+				"weapon"				"weapon_cobra"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_hkusp"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_m4a1"
+				// "weapon"				"weapon_m16a4"
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				// "weapon"				"weapon_mk18"
+				// "weapon"				"weapon_galil_sar"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_l1a1"
+				// "weapon"				"weapon_scarl"
+				 "weapon"				"weapon_l85a2"
+				 "weapon"				"weapon_f2000"
+				// "weapon"				"weapon_steyraug"
+				 "weapon"				"weapon_c96carbine"
+				 "weapon"				"weapon_asval"
+				//"weapon"				"weapon_m4a1sopmod"
+				 "weapon"				"weapon_m16a1"
+				 "weapon"				"weapon_sr25"
+				// "weapon"				"weapon_mk18_m0"
+				// "weapon"				"weapon_type95"
+				// "weapon"				"weapon_cm901"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_hk417"
+				 "weapon"				"weapon_honeybadger"
+				// "weapon"				"weapon_car15"
+				// "weapon"				"weapon_g33"
+				// "weapon"				"weapon_ak12u"
+				// "weapon"				"weapon_acr"
+				 "weapon"				"weapon_sig553"
+				// "weapon"				"weapon_scar"
+				 "weapon"				"weapon_g36c"
+				// "weapon"				"weapon_famas"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				//"weapon"				"weapon_mp5"
+				//"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				//"weapon"				"weapon_ump45"
+				//"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_sten"
+				//"weapon"				"weapon_p90"
+				//"weapon"				"weapon_krissvector"
+				"weapon"				"weapon_ppsh41"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_ots33"
+				//"weapon"				"weapon_mp7"
+				//"weapon"				"weapon_mp5a4"
+				//"weapon"				"weapon_uzi"
+				"weapon"				"weapon_colt9mm"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_mini14"
+				// "weapon"				"weapon_m14"
+				"weapon"				"weapon_m1a1"
+				"weapon"				"weapon_sks"
+				"weapon"				"weapon_dragunovsvu"
+				// "weapon"				"weapon_m1asocom16"
+				"weapon"				"weapon_m1garand"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_m40a1"
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_M107"
+				// "weapon"				"weapon_enfield"
+				// "weapon"				"weapon_remingtonmsr"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_m249"
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_m590"
+				"weapon"				"weapon_toz"
+				"weapon"				"weapon_saiga12auto"
+				"weapon"				"weapon_m1014"
+				"weapon"				"weapon_m500"
+				"weapon"				"weapon_nova"
+				"weapon"				"weapon_ksg"
+				"weapon"				"weapon_spas12"
+			}
+			"cost_modifiers"
+			{
+				"weapon"
+				{
+					"weapon_healthkit"				"0"
+				}
+			}
+		}
+		
+		//  											BOT												  //
+		"coop_insurgents_fighter1"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Fighter1"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_h.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_heavy_armor"
+				
+				"weapon"				"weapon_doi2ins_brassknuckles_melee"
+				
+				"weapon"				"weapon_ak74"
+				"weapon_upgrade"		"ammo_ap_ak74"
+				"weapon_upgrade"		"stock_akstock"
+				"weapon_upgrade"		"barrel_heavybarrel"
+				"weapon_upgrade"		"underbarrel_woodgrip"
+				"weapon_upgrade"		"siderail_flashlight_band"
+				"weapon_upgrade"		"weapon_mod_speed_reload"
+				"weapon_upgrade"		"magazine_extended_akseries_45rd"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				"weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				"weapon"				"weapon_galil"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_fighter2"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Specialist"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_m.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				
+				"weapon"				"weapon_mp40"
+				"weapon_upgrade"		"ammo_ap_mp40"
+				"weapon_upgrade"		"perk_tactical_sling"
+				"weapon_upgrade"		"barrel_silencer_ins1"
+				"weapon_upgrade"		"underbarrel_foregrip_ins1"
+				"weapon_upgrade"		"siderail_lasersight_band"
+				"weapon_upgrade"		"weapon_mod_speed_reload"
+				
+				"weapon"				"weapon_kabar"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				"weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				"weapon"				"weapon_galil"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_fighter3"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Fighter3"		
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_l.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}				
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				
+				"weapon"				"weapon_doi2ins_etool_melee"
+				
+				// "weapon"				"weapon_glock18"
+				// "weapon_upgrade"		"ammo_ap_m9"
+				// "weapon_upgrade"		"tactical_spring"
+				// "weapon_upgrade"		"perk_speed_holster"
+				// "weapon_upgrade"		"siderail_lasersight_pistol"
+				// "weapon_upgrade"		"weapon_mod_speed_reload"
+				// "weapon_upgrade"		"magazine_extended_glock"
+				
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_m18"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				"weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				"weapon"				"weapon_galil"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				"weapon"				"weapon_mosin"
+				"weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				"weapon"				"weapon_mg42"
+				"weapon"				"weapon_mk46"
+				"weapon"				"weapon_m60"
+				"weapon"				"weapon_pecheneg"
+				"weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_machinegunner"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_MachineGunner"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_h.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}				
+				"attachments"	
+				{
+					"helmet"
+					{
+						"model"			"models/characters/ins_helmet_head.mdl"
+					}
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_heavy_armor"
+				
+				"weapon"				"weapon_doi2ins_hatchet_melee"
+				
+				"weapon"				"weapon_rpk"
+				"weapon_upgrade"		"762x39_AP"
+				"weapon_upgrade"		"barrel_heavybarrel"
+				"weapon_upgrade"		"weapon_mod_speed_reload"
+				"weapon_upgrade"		"perk_tactical_sling"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				// "weapon"				"weapon_f1"
+				// "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_galil"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				"weapon"				"weapon_rpk"
+			    //"weapon"				"weapon_mg42"
+				//"weapon"				"weapon_mk46"
+				//"weapon"				"weapon_m60"
+				"weapon"				"weapon_pecheneg"
+				//"weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_shotgunner"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Shotgunner"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_h.mdl"
+				"bodygoups"
+				{
+					"kit"					"2"
+					"backpack"				"1"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				
+				"weapon"				"weapon_doi2ins_hatchet_melee"
+				
+				"weapon"				"weapon_toz"
+				"weapon_upgrade"		"perk_quick_reload"
+				"weapon_upgrade"		"perk_fast_pump_action"
+				"weapon_upgrade"		"barrel_silencer_heavy"
+				"weapon_upgrade"		"underbarrel_foregrip_ins2"
+				"weapon_upgrade"		"perk_tactical_sling"
+				"weapon_upgrade"		"siderail_lasersight_shotgun_ins"
+				
+				"weapon"				"weapon_molotov"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+				"weapon"				"weapon_doi2ins_hatchet_melee"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_galil"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				"weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_sniper"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Sharpshooter"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_l.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_light_armor"
+				
+				"weapon"				"weapon_kabar"
+				
+				"weapon"				"weapon_sks"
+				"weapon_upgrade"		"optic_aimpoint"
+				"weapon_upgrade"		"weapon_mod_speed_reload"
+				"weapon_upgrade"		"siderail_lasersight_band"
+				"weapon_upgrade"		"underbarrel_bipod"
+				// "weapon_upgrade"		"ammo_ap_sks"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				// "weapon"				"weapon_deagle"
+				// "weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_galil"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				"weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				"weapon"				"weapon_mosin"
+				"weapon"				"weapon_kar98"
+				"weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_rpg"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Engineer"
+			"models"
+			{
+				"player"				"models/characters/insurgent_light.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_ins_m.mdl"
+				"bodygoups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"weapon"				"weapon_rpg7"
+				"weapon"				"weapon_f1"
+			}
+			"allowed_items"
+			{
+				// "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				"gear"					"ins_light_armor"
+				"gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				"weapon_upgrade"					"underbarrel_rifle_grenade"
+				"weapon_upgrade"					"underbarrel_ugl_he"
+				"weapon_upgrade"					"underbarrel_m203_he"
+				"weapon_upgrade"					"underbarrel_gp25_he"
+				"weapon_upgrade"					"underbarrel_m203_incid"
+				"weapon_upgrade"					"underbarrel_ugl_smoke"
+				"weapon_upgrade"					"underbarrel_m203_smoke"
+				"weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				// "weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				"weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				// "weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				"weapon"				"weapon_molotov"
+				"weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_makarov"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				"weapon"				"weapon_akm"
+				"weapon"				"weapon_ak74"
+				"weapon"				"weapon_galil"
+				"weapon"				"weapon_fal"
+				"weapon"				"weapon_stg44"
+				"weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				"weapon"				"weapon_mp40"
+				"weapon"				"weapon_sterling"
+				"weapon"				"weapon_aks74u"
+				"weapon"				"weapon_p90"
+				"weapon"				"weapon_thompson"
+				"weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+		"coop_insurgents_bomber"
+		{
+			"team"					"security,insurgents"
+			"print_name"				"#Squad_Cell_Bomber"
+			"models"
+			{
+				"player"				"models/characters/civilian_vip_insurgent.mdl"
+				"viewmodel_hands"			"models/weapons/v_hands_vip.mdl"
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+					"glasses"				"1"
+				}				
+
+			}
+			"buy_order"
+			{
+				"gear"					"ins_chest_carrier"
+				"weapon"				"weapon_kabar"
+				"weapon"				"weapon_deagle"
+				"weapon_upgrade"		"perk_speed_holster"
+				"weapon_upgrade"		"weapon_mod_speed_reload"
+				"weapon_upgrade"		"magazine_extended_pistol"
+				"weapon_upgrade"		"siderail_lasersight_pistol"
+				"weapon_upgrade"		"ammo_ap_deagle"
+				"weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+			}
+			"allowed_items"
+			{
+				// // "gear"					"primary_sling"
+				"gear"					"ins_chest_rig"
+				"gear"					"ins_chest_carrier"
+				// "gear"					"ins_light_armor"
+				// "gear"					"ins_heavy_armor"
+
+				// ========================================
+				// ARMOR & CARRIER
+				// ========================================
+				// "weapon_upgrade"					"underbarrel_rifle_grenade"
+				// "weapon_upgrade"					"underbarrel_ugl_he"
+				// "weapon_upgrade"					"underbarrel_m203_he"
+				// "weapon_upgrade"					"underbarrel_gp25_he"
+				// "weapon_upgrade"					"underbarrel_m203_incid"
+				// "weapon_upgrade"					"underbarrel_ugl_smoke"
+				// "weapon_upgrade"					"underbarrel_m203_smoke"
+				// "weapon_upgrade"					"underbarrel_gp25_smoke"
+
+				// ========================================
+				// DEFIB & MED KITS
+				// ========================================
+				"weapon"				"weapon_healthkit"
+				// "weapon"				"weapon_defib"
+
+				// ========================================
+				// MELEE刀
+				// ========================================
+				"weapon"				"weapon_kabar"
+
+				// ========================================
+				// EXPLOSIVES
+				// ========================================
+				// "weapon"				"weapon_rpg7"
+				// "weapon"				"weapon_c4_clicker"
+				"weapon"				"weapon_c4_ied"
+				"weapon"				"weapon_f1"
+				// "weapon"				"weapon_molotov"
+				// "weapon"				"weapon_m18"
+
+				// ========================================
+				// PISTOLS 手枪
+				// ========================================
+				// "weapon"				"weapon_m9"
+				// "weapon"				"weapon_makarov"
+				"weapon"				"weapon_deagle"
+				"weapon"				"weapon_glock18"
+				// "weapon"				"weapon_glock17"
+
+				// ========================================
+				// ASSAULT RIFLES 突击步枪
+				// ========================================
+				// "weapon"				"weapon_akm"
+				// "weapon"				"weapon_ak74"
+				// "weapon"				"weapon_galil"
+				// "weapon"				"weapon_fal"
+				// "weapon"				"weapon_stg44"
+				// "weapon"				"weapon_ak12u"
+
+				// ========================================
+				// SUBMACHINE GUNS  冲锋枪
+				// ========================================
+				// "weapon"				"weapon_mp40"
+				// "weapon"				"weapon_sterling"
+				// "weapon"				"weapon_aks74u"
+				// "weapon"				"weapon_p90"
+				// "weapon"				"weapon_thompson"
+				// "weapon"				"weapon_uzi"
+
+				// ========================================
+				// SEMI-AUTO RIFLES 半自动步枪
+				// ========================================
+				// "weapon"				"weapon_sks"
+
+				// ========================================
+				// SNIPER AND BOLT ACTION RIFLES狙击手和栓动步枪
+				// ========================================
+				// "weapon"				"weapon_mosin"
+				// "weapon"				"weapon_kar98"
+				// "weapon"				"weapon_svd"
+
+				// ========================================
+				// LMG 机枪
+				// ========================================
+				// "weapon"				"weapon_rpk"
+				// "weapon"				"weapon_mg42"
+				// "weapon"				"weapon_mk46"
+				// "weapon"				"weapon_m60"
+				// "weapon"				"weapon_pecheneg"
+				// "weapon"				"weapon_m240"
+
+				// ========================================
+				// SHOTGUNS  霰弹枪
+				// ========================================
+				// "weapon"				"weapon_toz"
+			}
+		}
+	}	
+}

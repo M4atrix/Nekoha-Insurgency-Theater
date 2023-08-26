@@ -1,0 +1,103 @@
+"#base" "theater_gandor233_armoryexpanded_medic_bomber.theater"
+
+"theater"
+{
+	"teams"
+	{
+		"security"
+		{
+			"squads"
+			{
+				"#Fireteam_Alpha"
+				{
+					"#Squad_Commander_Leader"		"squad_commander_leader"
+					"#Squad_Assault"					"squad_assault"
+					"#Squad_Assault"					"squad_assault"
+					"#Squad_Engineer"					"squad_engineer"
+					"#Squad_Medic"						"squad_medic"
+				}
+				"#Fireteam_Bravo"
+				{
+					"#Squad_Commander_Leader"		"squad_commander_leader"
+					"#Squad_Assault"					"squad_assault"
+					"#Squad_Assault"					"squad_assault"
+					"#Squad_Engineer"					"squad_engineer"
+					"#Squad_Medic"						"squad_medic"
+				}
+			}
+		}
+		
+		"insurgents"
+		{
+			"squads"
+			{
+				"#Cell_Alpha"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Sapper"					"coop_insurgents_rpg"
+					"#Squad_Cell_Bomber"					"coop_insurgents_bomber"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+				"#Cell_Bravo"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Sapper"					"coop_insurgents_rpg"
+					"#Squad_Cell_Bomber"					"coop_insurgents_bomber"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+				"#Cell_Charlie"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+				"#Cell_Delta"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+				"#Cell_Echo"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+				"#Cell_Foxtrot"
+				{
+					"#Squad_Cell_MachineGunner"				"coop_insurgents_machinegunner"
+					"#Squad_Cell_Shotgunner"				"coop_insurgents_shotgunner"
+					"#Squad_Cell_Sniper"					"coop_insurgents_sniper"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter1"					"coop_insurgents_fighter1"
+					"#Squad_Cell_Fighter2"					"coop_insurgents_fighter2"
+					"#Squad_Cell_Fighter3"					"coop_insurgents_fighter3"
+				}
+			}
+		}
+	}
+}

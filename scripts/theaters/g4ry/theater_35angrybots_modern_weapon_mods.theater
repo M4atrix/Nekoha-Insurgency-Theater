@@ -1,0 +1,223 @@
+"#base" "theater_35angrybots_base_weapon_upgrades.theater"
+
+//SOME WEAPONS ARE FROM OTHER THEATERS - DOES NOT MATTER - CROSS-COMPATIBLE 
+
+//LIKE RIPPING MY THEATER FILES APART? I DON'T MIND
+//I HAVE TAKEN HUNDREDS OF HOURS LEARNING AND IMPLEMENTING TO GET WHAT I HAVE ACHIEVED - DUE TO LACK OF PROPER DOCUMENTATION
+//GIVE SOME RECOGNITION IS ALL I ASK - WANT TO BE EVEN NICER!? - www.insGamer.com/donate.php - IT DRIVES ME TO CREATE MORE CONTENT
+
+"theater"
+{
+	"weapon_upgrades"
+	{
+		// ========================================
+		// IMPACT SMOKE WEAPON MODIFICATION
+		// ========================================
+		"weapon_mod_m18_impact"
+		{
+        	"upgrade_slot"				"ammo"
+			"print_name"				"#weapon_mod_m18_impact"
+			"print_desc"				"#weapon_mod_m18_impact_desc"
+			"class_restricted"			"0"
+			"upgrade_cost"				"0"
+			"team_access"				"security, insurgent"
+			
+			"weapon_mods"
+			{		
+			
+				"weapon_m18"
+				{
+					"explosives"
+					{
+						"entity"				"grenade_m18_impact"
+					}
+				}
+																		
+			}
+			
+			"allowed_weapons"
+			{
+				"weapon"				"weapon_m18"
+			}
+		}
+		// ========================================
+		// DELAY FUSE GRENADE WEAPON MODIFICATION
+		// ========================================
+		"weapon_mod_delay_fuse"
+		{
+        	"upgrade_slot"				"ammo"
+			"print_name"				"#weapon_mod_delay_fuse"
+			"print_desc"				"#weapon_mod_delay_fuse_desc"
+			"class_restricted"			"0"
+			"upgrade_cost"				"0"
+			"team_access"				"security, insurgent"
+			
+			"weapon_mods"
+			{		
+			
+				"weapon_m67"
+				{
+					"explosives"
+					{
+						"entity"				"grenade_m67_delay_fuse"
+					}
+				}
+				"weapon_f1"
+				{
+					"explosives"
+					{
+						"entity"				"grenade_f1_delay_fuse"
+					}
+				}
+																		
+			}
+			
+			"allowed_weapons"
+			{
+				"weapon"				"weapon_m67"
+				"weapon"				"weapon_f1"
+			}
+		}
+		
+		// ========================================
+		// RATE-OF-FIRE WEAPON MODIFICATIONS
+		// ========================================
+		"weapon_mod_rof_250"
+		{
+        	"upgrade_slot"				"magazine"
+			"print_name"				"#weapon_mod_increased_rof"
+			"print_desc"				"#weapon_mod_increased_rof_250"
+			"class_restricted"			"0"
+			"upgrade_cost"				"1"
+			"team_access"				"security, insurgent"
+			
+			"weapon_mods"
+			{
+				"weapon_glock18"
+				{
+					"rounds_per_minute"			"1250"
+				}	
+				
+				"weapon_uzi"
+				{
+					"rounds_per_minute"			"850"
+				}
+				
+				"weapon_scarl"
+				{
+					"rounds_per_minute"			"850"
+				}	
+
+				"weapon_deltasrifle"
+				{
+					"rounds_per_minute"			"850"
+				}
+			
+																		
+			}
+			
+			"allowed_weapons"
+			{
+				"weapon"				"weapon_uzi"
+				"weapon"				"weapon_scarl"
+				"weapon"				"weapon_glock18"
+				"weapon"				"weapon_deltasrifle"
+			}
+		}
+		
+		// ========================================
+		// RELOAD WEAPON MODIFICATIONS
+		// ========================================	
+		
+		// ========================================
+		// MP5A4 TO MP5SD6 WEAPON MODIFICATIONS
+		// ========================================	
+		"weapon_mod_mp5sd6"
+		{
+        	"upgrade_slot"				"aesthetic"
+			"print_name"				"#weapon_mod_mp5sd6"
+			"print_desc"				"#weapon_mod_mp5sd6_desc"
+			"class_restricted"			"0"
+			"upgrade_cost"				"1"
+			"team_access"				"security, insurgent"
+			
+
+			"viewmodel_attachments"
+			{
+				"mp5sd6"
+				{
+					"model"					"models/insgwep/v_mp5spdw.mdl"
+                    "fallback_for_slot"		"aesthetic"
+				}
+				"mp5silencer"
+				{
+					"model"					"models/insgwep/upgrades/a_suppressor_mp5.mdl"
+					
+					"scales"
+					{
+						"weapon_mp5a4"				"0.75"
+					}
+				}
+			}
+			
+			"world_attachments"
+			{
+				"mp5sd6"
+				{
+					"model"					"models/weapons/w_m5a4.mdl"
+                    "fallback_for_slot"		"aesthetic"
+				}
+				
+				"mp5silencer"
+				{
+					"model"					"models/weapons/upgrades/w_sil_sec1.mdl"
+				}
+				
+			}  			
+			
+			
+			"excluded_upgrades"
+			{
+				"0"						   "barrel_silencer_mp5"
+				"0"						   "barrel_silencer_sec1"
+			}     			
+			
+			"weapon_mods"
+			{		
+			
+				"weapon_mp5a4"
+				{
+
+				"weapon_abilities"			"ironsight, silencer"
+				"rounds_per_minute"			"950"				
+				
+					
+				"sounds"
+				{
+					"shot_single"				"Weapon_Welrod.Single"
+					"shot_single_local"			"Weapon_Welrod.SingleLocal"
+               	    "shot_silent"				"Weapon_Welrod.Single"
+             	    "shot_silent_local"			"Weapon_Welrod.SingleLocal"	
+					"empty"						"Weapon_MP5K.Empty"
+					"clipin"					"Weapon_MP5K.Magin"
+					"clipout"					"Weapon_MP5K.Magout"
+					"boltback"					"Weapon_MP5K.Boltback"
+					"boltrelease"				"Weapon_MP5K.Boltrelease"
+					"rofdown"					"Weapon_MP5K.ROF"
+					"rofup"						"Weapon_MP5K.ROF"
+				
+					"thirdperson_prefix"		"Weapon_MP5K"
+				}	
+				
+				
+				}
+																				
+			}
+			
+			"allowed_weapons"
+			{
+				"weapon"				"weapon_mp5a4"
+			}
+		}
+	}
+}
